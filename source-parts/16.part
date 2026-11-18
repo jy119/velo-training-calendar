@@ -1,0 +1,3 @@
+=>{const data=JSON.stringify({app:'velo-training-v1',exportedAt:new Date().toISOString(),ftp,workouts},null,2);const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:'application/json'}));a.download='velo-training-plan.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+render();
+</script></body></html>
