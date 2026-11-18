@@ -1,0 +1,7 @@
+tor('.event').onclick=()=>openModal(id);root.appendChild(el);
+}
+const ref=iso(new Date(month.getFullYear(),month.getMonth(),15,12));const w=currentWeek(ref);document.getElementById('weekcontext').innerHTML=w?'<div class="weekbar"><div><b>'+clean(w.phase)+' · '+clean(w.focus)+'</b><div><span>Week of '+pretty(w.start)+' · '+w.hours+' hours planned · max 2 hard days</span></div></div><button id="openweek">See weekly plan →</button></div>':'';
+const wb=document.getElementById('openweek');if(wb)wb.onclick=()=>switchTab('weeks');
+}
+function renderWeeks(){document.getElementById('weeks').innerHTML=weeks.map((w,i)=>'<div class="week-row" data-week="'+i+'"><b>Week '+(i+1)+'<span class="range">'+pretty(w.start)+'</span></b><span class="phase">'+clean(w.phase)+'</span><p>'+clean(w.focus)+' · Tue: '+clean(w.tue)+'</p><b>'+w.hours+' hr</b><span class="range">View week →</span></div>').join('');document.querySelectorAll('[data-week]').forEach(x=>x.onclick=()=>{month=parse(weeks[Number(x.dataset.week)].start);month.setDate(1);switchTab('calendar')})}
+function renderBlocks(){const phases=[];weeks.forEach(w=>{let p=phases[phases.length-1];if(p&&p.name===w.phase){p.count++}else phases.push({name:w.phase,focus:w.focus,count:1,start:w.start})});document.getElementById('blocks').innerHTML=phases.map(p=>'<div class="block"><span class="count">'+p.count+' WEEK'+(p.count>1?'S':'')+' · '+pretty(p.start
