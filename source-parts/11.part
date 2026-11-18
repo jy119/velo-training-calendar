@@ -1,0 +1,11 @@
+=w.hours;document.getElementById('ftptop').innerHTML=ftp+'<span style="font-size:13px"> W</span>';document.getElementById('count').textContent=Object.values(workouts).filter(x=>x.done).length}
+function renderCalendar(){
+document.getElementById('monthtitle').textContent=monthName(month);const root=document.getElementById('calendar');root.innerHTML='';
+names.forEach(n=>root.innerHTML+='<div class="weekday">'+n+'</div>');
+const first=new Date(month.getFullYear(),month.getMonth(),1,12);const offset=(first.getDay()+6)%7;const days=new Date(month.getFullYear(),month.getMonth()+1,0).getDate();
+const total=Math.ceil((offset+days)/7)*7;const today=iso(new Date());
+for(let i=0;i<total;i++){
+const date=new Date(month.getFullYear(),month.getMonth(),i-offset+1,12);const id=iso(date),out=date.getMonth()!==month.getMonth(),x=workouts[id],isToday=id===today;
+const el=document.createElement('div');el.className='day'+(out?' out':'')+(isToday?' today':'');
+el.innerHTML='<div class="date"><span>'+date.getDate()+'</span>'+(isToday?'<span>●</span>':'')+'</div>'+(x?'<button class="event '+x.type+(x.done?' done':'')+'" aria-label="Edit '+clean(x.name)+'"><span>'+clean(x.name)+'</span><small>'+(x.done?'✓ Completed':x.type==='key'?'Key workout':x.type==='hard'?'Group / quality':x.type==='easy'?'Endurance':'Recovery')+'</small></button>':'<button class="event rest">+ Add workout</button>');
+el.querySelec
