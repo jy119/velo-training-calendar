@@ -1,0 +1,12 @@
+
+if(w<=17)return ['Early race prep','Race-specific power',['Over-unders 3×12 (95/105%)','VO2 6×3 @115–120%','THR 2×20 @95–100%'][w-15],'Group hard OR short intensity','Group ride / race if scheduled','9–12'];
+if(w===18)return ['Recovery','Recovery / freshness','Z2','Easy group','2–3h easy','6–8'];
+if(w<=21)return ['Build 2','Sustained + repeated efforts',['THR 3×15 @95–100%','Over-unders 4×10 (95/105%)','VO2 5×4 @110–115%'][w-19],'Hard group OR 30/30s','4–5h group / race','10–12'];
+if(w===22)return ['Recovery','Absorb block','Easy spin','Group Z2 only','3h Z2','6–8'];
+if(w<=25)return ['Race season','Maintain, don’t accumulate fatigue',['THR 2×15 @95–100%','VO2 4×3 @115%','Over-unders 2×12'][w-23],'Group hard if no race','Group ride / race','9–12'];
+if(w===26)return ['Recovery','Lower load','Easy Z2','Group easy','2–3h endurance','6–8'];
+if(w<=29)return ['Race season','Specificity + freshness',['VO2 4×4 @110–115%','THR 2×20 @95–100%','VO2 5×3 @115–120%'][w-27],'Group hard if no race','Group ride / race','9–12'];
+if(w===30)return ['Recovery','Regroup','Easy Z2','Group easy','3h easy','6–8'];
+return ['Maintenance','Flexible summer race block','THR 2×15 OR VO2 4×3','Group ride / race','Long group ride / race','9–12'];
+}
+const weeks=Array.from({length:TOTAL},(_,i)=>{const p=prescription(i+1);return {start:plus(START,7*i),phase:p[0],focus:p[1],tue:p[2],thu:p[3],sat:p[4],hours:p[5],re
