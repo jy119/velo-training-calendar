@@ -1,0 +1,15 @@
+2, DAY=86400000;
+const pad=n=>String(n).padStart(2,'0');
+const parse=d=>new Date(d+'T12:00:00');
+const iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const plus=(date,n)=>{const d=parse(date);d.setDate(d.getDate()+n);return iso(d)};
+const pretty=date=>parse(date).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+const names=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+function prescription(w){
+if(w<=2)return ['Reset','Return to routine','Tempo 2×20 @80–85%','Steady group / Z2','4h group Z2, no forced surges','9–10'];
+if(w<=5)return ['Base 1','SST progression',['SST 3×12 @88–92%','SST 3×15 @88–92%','SST 3×20 @88–92%'][w-3],'Group steady / tempo optional','4–5h group; aerobic focus','10–12'];
+if(w===6)return ['Recovery','Reduce fatigue','Optional 2×10 tempo','Easy social ride','2–3h comfortable','6–8'];
+if(w<=9)return ['Base 2','Threshold durability',['THR 4×8 @98–100%','THR 3×12 @95–100%','THR 3×15 @95–100%'][w-7],'Hard group OR Z2','4–5h group','11–13'];
+if(w===10)return ['Recovery','Absorb threshold block','Z2 / short tempo','Easy social ride','3h easy endurance','6–8'];
+if(w<=13)return ['Build 1','VO2 and repeatability',['VO2 5×3 @115–120%','VO2 5×4 @110–115%','VO2 5×5 @108–112%'][w-11],'Hard group OR 30/30s','4–5h group, race-like','10–12'];
+if(w===14)return ['Recovery','Freshen up','Z2; optional 3×3 openers','Easy group','3h endurance','6–8'];
