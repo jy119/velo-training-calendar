@@ -1,17 +1,30 @@
 # VELO — Cycling Training Studio
 
-Cycling training calendar covering November 2026 through June 2027.
+Live application: https://velo-training.vercel.app
 
-## Development
+A flexible cycling training calendar for the 2026–27 season. Changes committed to `main` deploy automatically through GitHub → Vercel.
 
-Run `npm run build`, then open `dist/index.html` in a browser. The site is a self-contained static page (no dependencies or backend).
+## V2 features
 
-The original deployed HTML was faithfully imported in 17 sequential UTF-8 source fragments in `source-parts/`; `build.mjs` concatenates them without modification. This preserves the existing production experience. A future cleanup can consolidate those parts into a normal `index.html`.
+- 28 dated events from the [2027 NCNCA calendar](https://ncnca.org/events/) (reviewed November 17, 2026). All races start as **Considering**, so no race is assumed to be on the user's schedule.
+- Each race can be marked **Considering**, **B**, **A**, or **Skipping**. A and B priorities affect the suggested training plan, not the underlying workout data.
+- Optional **travel blocks**, with **No bike**, **Limited**, **Bike available**, or **Unknown**. Travel dates are imported privately into the user's browser, never committed to this public repo.
+- **Strava CSV imports** for actual cycling activities and transparent duration-coverage comparisons. This is NOT a direct Strava API integration or automatic sync.
+- Training calendar extended through September 2027.
 
-## Deployment
+## Private data and storage
 
-Connected to Vercel via GitHub. Pushing to `main` triggers a production build.
+User activity and travel data are stored in browser `localStorage` only. They are not available across browsers or devices, and clearing browser storage erases them. The app has no authentication or cloud database. Avoid committing personal calendar exports or activity files to this public repository.
 
-## Data
+## Implementation
 
-Changes are saved to the browser's localStorage. There is no account login or cross-device sync. Use the in-app Export option for backups.
+The V1 source was preserved as 17 ordered UTF-8 fragments in `source-parts/`.
+`build.mjs` concatenates these and adds `enhancements.css` / `enhancements.js`, then emits `dist/index.html` and `races-2027.json`. Run:
+
+```bash
+npm run build
+```
+
+Vercel builds with `npm run build` and publishes `dist`.
+
+The calendar/race list is a snapshot, not an automatically refreshed NCNCA feed. Dates may change. A future live Strava integration would require a server-side OAuth implementation, credentials, token storage, and user authorization. Do not expose a Strava client secret in browser code.
