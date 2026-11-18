@@ -1,0 +1,202 @@
+{
+  "source": "https://ncnca.org/events/",
+  "checked": "2026-11-17",
+  "events": [
+    {
+      "id": "ncnca-2027-1",
+      "date": "2027-01-30",
+      "name": "Cal Aggie Criterium",
+      "type": "Criterium",
+      "location": "Sacramento, CA"
+    },
+    {
+      "id": "ncnca-2027-2",
+      "date": "2027-01-31",
+      "name": "UC Davis Flatlands",
+      "type": "Circuit",
+      "location": "Davis, CA"
+    },
+    {
+      "id": "ncnca-2027-3",
+      "date": "2027-02-13",
+      "name": "Cantua Creek Road Race",
+      "type": "Road race",
+      "location": "Coalinga, CA"
+    },
+    {
+      "id": "ncnca-2027-4",
+      "date": "2027-02-21",
+      "name": "Copper Valley Circuit Race",
+      "type": "Circuit",
+      "location": "Copperopolis, CA"
+    },
+    {
+      "id": "ncnca-2027-5",
+      "date": "2027-02-27",
+      "name": "Snelling Road Race",
+      "type": "Road race",
+      "location": "Snelling, CA"
+    },
+    {
+      "id": "ncnca-2027-6",
+      "date": "2027-03-13",
+      "name": "SGW Land Park Criterium",
+      "type": "Criterium",
+      "location": "Sacramento, CA"
+    },
+    {
+      "id": "ncnca-2027-7",
+      "date": "2027-03-14",
+      "name": "Bariani Road Race",
+      "type": "Road race",
+      "location": "Zamora, CA"
+    },
+    {
+      "id": "ncnca-2027-8",
+      "date": "2027-03-20",
+      "name": "Cat’s Hill Classic",
+      "type": "Criterium",
+      "location": "Los Gatos, CA"
+    },
+    {
+      "id": "ncnca-2027-9",
+      "date": "2027-03-21",
+      "name": "Santa Cruz Classic Criterium",
+      "type": "Criterium",
+      "location": "Santa Cruz, CA"
+    },
+    {
+      "id": "ncnca-2027-10",
+      "date": "2027-03-27",
+      "name": "Copperopolis Road Race",
+      "type": "Road race",
+      "location": "Milton, CA"
+    },
+    {
+      "id": "ncnca-2027-11",
+      "date": "2027-04-17",
+      "name": "Berkeley Hills Road Race",
+      "type": "Road race",
+      "location": "Orinda, CA"
+    },
+    {
+      "id": "ncnca-2027-12",
+      "date": "2027-04-18",
+      "name": "Berkeley Streets Criterium",
+      "type": "Criterium",
+      "location": "Berkeley, CA"
+    },
+    {
+      "id": "ncnca-2027-13",
+      "date": "2027-04-30",
+      "name": "Golden State Race Series – Time Trial",
+      "type": "Time trial",
+      "location": "Rancho Cordova, CA"
+    },
+    {
+      "id": "ncnca-2027-14",
+      "date": "2027-05-01",
+      "name": "Golden State Race Series – Criterium",
+      "type": "Criterium",
+      "location": "Rancho Cordova, CA"
+    },
+    {
+      "id": "ncnca-2027-15",
+      "date": "2027-05-02",
+      "name": "Golden State Race Series – Circuit",
+      "type": "Circuit",
+      "location": "Rancho Cordova, CA"
+    },
+    {
+      "id": "ncnca-2027-16",
+      "date": "2027-05-08",
+      "name": "Winchester Circuit Race",
+      "type": "Circuit",
+      "location": "Meadow Vista, CA"
+    },
+    {
+      "id": "ncnca-2027-17",
+      "date": "2027-05-29",
+      "name": "Regalado Road Race",
+      "type": "Road race",
+      "location": "Oakdale, CA"
+    },
+    {
+      "id": "ncnca-2027-18",
+      "date": "2027-06-12",
+      "name": "Dash for Cash",
+      "type": "Criterium",
+      "location": "Pleasanton, CA"
+    },
+    {
+      "id": "ncnca-2027-19",
+      "date": "2027-06-13",
+      "name": "Calaveras Time Trial",
+      "type": "Time trial",
+      "location": "Sunol, CA"
+    },
+    {
+      "id": "ncnca-2027-20",
+      "date": "2027-07-04",
+      "name": "Helen Pool 4th of July Criterium",
+      "type": "Criterium",
+      "location": "Davis, CA"
+    },
+    {
+      "id": "ncnca-2027-21",
+      "date": "2027-07-17",
+      "name": "Pescadero Coastal Classic Road Race",
+      "type": "Road race",
+      "location": "Pescadero, CA"
+    },
+    {
+      "id": "ncnca-2027-22",
+      "date": "2027-08-01",
+      "name": "Patterson Pass Road Race",
+      "type": "Road race",
+      "location": "Tracy, CA"
+    },
+    {
+      "id": "ncnca-2027-23",
+      "date": "2027-08-08",
+      "name": "Shea Center Criterium",
+      "type": "Criterium",
+      "location": "Livermore, CA"
+    },
+    {
+      "id": "ncnca-2027-24",
+      "date": "2027-08-21",
+      "name": "Winters Criterium",
+      "type": "Criterium",
+      "location": "Winters, CA"
+    },
+    {
+      "id": "ncnca-2027-25",
+      "date": "2027-08-22",
+      "name": "Winters Road Race",
+      "type": "Road race",
+      "location": "Winters, CA"
+    },
+    {
+      "id": "ncnca-2027-26",
+      "date": "2027-09-05",
+      "name": "Montage Wellness – Sand City Criterium",
+      "type": "Criterium",
+      "location": "Sand City, CA"
+    },
+    {
+      "id": "ncnca-2027-27",
+      "date": "2027-09-06",
+      "name": "Il Giro di San Francisco",
+      "type": "Criterium",
+      "location": "San Francisco, CA"
+    },
+    {
+      "id": "ncnca-2027-28",
+      "date": "2027-09-19",
+      "name": "Oakland Grand Prix",
+      "type": "Criterium",
+      "location": "Oakland, CA"
+    }
+  ]
+}
