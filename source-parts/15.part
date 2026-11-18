@@ -1,0 +1,11 @@
+();if(!name)return alert('Enter a workout name');workouts[id]={name,type:document.getElementById('workouttype').value,detail:document.getElementById('workoutdetail').value,done:document.getElementById('workoutdone').checked};persist();closeModal();render()};
+document.getElementById('deleteworkout').onclick=()=>{delete workouts[id];persist();closeModal();render()};
+document.getElementById('powerhint').textContent='FTP '+ftp+' W · Threshold '+Math.round(.95*ftp)+'–'+ftp+' W · VO2 '+Math.round(1.1*ftp)+'–'+Math.round(1.2*ftp)+' W';
+}
+document.querySelectorAll('.tab').forEach(x=>x.onclick=()=>switchTab(x.dataset.tab));
+document.getElementById('prev').onclick=()=>{month.setMonth(month.getMonth()-1);renderCalendar()};document.getElementById('next').onclick=()=>{month.setMonth(month.getMonth()+1);renderCalendar()};
+document.getElementById('today').onclick=()=>{month=new Date();month.setDate(1);renderCalendar()};
+document.getElementById('add').onclick=()=>openModal(iso(new Date()));
+document.getElementById('ftp').onchange=e=>{const v=Number(e.target.value);if(v>=100&&v<=700){ftp=v;persist();render()}else alert('Please choose an FTP between 100 and 700 W')};
+document.getElementById('reset').onclick=()=>{if(confirm('Reset workouts to the original calendar? This removes your edits and completion history.')){workouts=seed();persist();render()}};
+document.getElementById('export').onclick=()
