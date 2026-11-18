@@ -28,3 +28,33 @@ npm run build
 Vercel builds with `npm run build` and publishes `dist`.
 
 The calendar/race list is a snapshot, not an automatically refreshed NCNCA feed. Dates may change. A future live Strava integration would require a server-side OAuth implementation, credentials, token storage, and user authorization. Do not expose a Strava client secret in browser code.
+
+
+## Optional Supabase account backend (in progress)
+
+Cloud support is implemented but **not activated** until a Supabase project is created and configured. Without it, VELO continues to operate exactly as before in local browser storage.
+
+1. Create a Supabase project (the Free plan is suitable for initial use).
+2. Apply `supabase/migrations/20261118000000_initial_backend.sql` in the SQL Editor. It creates per-user athlete state, profiles, ride activity records, and a server-only future integration table with Row Level Security.
+3. In Supabase Authentication settings, enable email sign-in; add `https://velo-training.vercel.app` to allowed redirect URLs and set the site URL accordingly.
+4. Add these **Production** environment variables in the Vercel project `velo-training`:
+   - `SUPABASE_URL` = your Supabase project URL
+   - `SUPABASE_PUBLISHABLE_KEY` = your **publishable (anon)** key; never a service_role or secret key
+5. Redeploy GitHub `main` to include the account UI.
+6. Sign in with an email link. The first sign-in can explicitly save the existing browser's calendar, workouts, FTP, race choices, travel blocks, and imported ride summaries. Other signed-in browsers then load the cloud plan.
+
+### How syncing works
+
+- User information is saved in `athlete_state` and only readable/writeable to its owning authenticated user under database RLS.
+- Writes use optimistic revision checks. If another browser has saved a different version, a conflicting save stops rather than silently overwriting.
+- Data is not automatically uploaded before explicit account initialization.
+- Per-user OAuth provider credentials will be added later using server-side handling and encrypted storage, not public browser code.
+- Supabase credentials are **not required** for anonymous read-only browsing of the current app. Existing browser-local functionality remains available without cloud configuration.
+- The currently implemented cloud state uses one per-user JSON document to safely migrate the existing code. We can normalize workouts, races, and trips into separate tables as features mature.
+
+### Developer checks
+
+```bash
+npm install
+npm run build
+```
