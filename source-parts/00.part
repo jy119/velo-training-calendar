@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>VELO — Training Calendar</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#f7f6f1;--ink:#1b302e;--muted:#78837d;--line:#e3e5dd;--accent:#df6646;--teal:#347a70;--pale:#e7efea;--yellow:#eedfb9;--white:#fff;--blue:#558198}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.shell{max-width:1440px;margin:auto;padding:0 34px 80px}.top{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-family:Manrope,sans-serif;font-weight:800;font-size:23px;letter-spacing:-1.3px}.brand span{color:var(--accent)}.brand small{font-size:10px;letter-spacing:2.3px;font-weight:700;color:var(--muted);display:block;margin-top:-4px}.top-right{display:flex;align-items:center;gap:10px}.tiny{font-size:11px;color:var(--muted)}.button{border:1px solid var(--line);background:white;padding:10px 16px;border-radius:10px;font-weight:700;color:var(--ink)}.butto
